@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TASK01</title>
+    <style>
+        main {
+            text-align: center;
+        }
+
+        .text {
+            width: 76px;
+            margin: auto;
+            text-align: center;
+            position: relative;
+            transition: all 0.2s;
+        }
+
+        .text::after {
+            content: '';
+            background: #0066FF;
+            width: 0;
+            height: 4px;
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 50%;
+            transform: translateX(-50%);
+            transition: all 0.2s;
+        }
+
+        .active {
+            color: #0066FF;
+        }
+
+        .active::after {
+            width: 100%;
+        }
+
+        .button {
+            margin-top: 32px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <p id="text" class="text">前端学院</p>
+        <button id="button" class="button">切换样式</button>
+    </main>
+
+    <script>
+        button.onclick = () => {
+            text.classList.toggle('active')
+        }
+    </script>
+</body>
+
+</html>
