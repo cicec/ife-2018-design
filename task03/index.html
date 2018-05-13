@@ -189,6 +189,26 @@
         }
 
         /*鼠标hover样式 写在这里*/
+
+        * {
+            transition: all 1s;
+        }
+
+        .face:hover+.ear-wrap>.left {
+            transform: rotate(-30deg);
+        }
+
+        .face:hover+.ear-wrap>.right {
+            transform: rotate(30deg);
+        }
+
+        .face:hover .eye-bottom {
+            transform: translateY(-16px);
+        }
+
+        .face:hover .face-red {
+            opacity: .4;
+        }
     </style>
 </head>
 
