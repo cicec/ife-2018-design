@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TASK04</title>
+    <style>
+        .container {
+            width: 250px;
+            height: 350px;
+        }
+
+        .container:hover .card {
+            transform: rotateY(180deg);
+        }
+
+        .card {
+            transition: all 0.4s;
+            position: relative;
+            transform-style: preserve-3d;
+        }
+
+        .front,
+        .back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            backface-visibility: hidden;
+        }
+
+        .front {
+            z-index: 1;
+        }
+
+        .back {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <img class="front" src="./img/正面.jpg" alt="">
+            <img class="back" src="./img/反面.jpg" alt="">
+        </div>
+    </div>
+</body>
+
+</html>
